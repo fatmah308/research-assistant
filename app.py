@@ -53,7 +53,7 @@ def run_pipeline(job_id: str, topic: str, uploaded_texts: list[str]):
         jobs[job_id]["progress"] = 20
 
         # ── Stage 2: Paper Discovery ───────────────────────────────
-        log.append({"stage": "Paper Discovery", "msg": "Searching arXiv..."})
+        log.append({"stage": "Paper Discovery", "msg": "Searching papers (Semantic Scholar + arXiv)..."})
 
         raw_papers = search_arxiv(refined["search_query"])
 
